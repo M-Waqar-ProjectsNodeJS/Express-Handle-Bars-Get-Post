@@ -1,0 +1,22 @@
+<h1>Sign Up Page ~ Form Validation</h1>
+{{#if success}}
+  <p>Success Full Validation</p>
+{{else}}
+  <ul>
+    {{#each errors}}
+      <li>{{this.msg}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
+<form action="/validateSignUp" method="post">
+  <label>Email</label>
+  <input type="text" id="email" name="email" />
+  <br /><br />
+  <label>Password*</label>
+  <input type="password" id="password" name="password" />
+  <br /><br />
+  <label>Confirm Password*</label>
+  <input type="password" id="confirmpassword" name="confirmpassword" />
+  <br /><br />
+  <input type="submit" value="Sign Up" />
+</form>
